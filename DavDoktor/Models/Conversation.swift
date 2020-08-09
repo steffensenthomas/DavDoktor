@@ -14,6 +14,10 @@ class Conversation: Decodable {
     var messages: Array<Message>
     var status: Int
     
+    func addMessage(message:Message) {
+        messages.append(message)
+    }
+    
     func closeConversation() {
         status = ConversationStatus.closed.rawValue;
     }
