@@ -15,6 +15,9 @@
 		137B376724DFFEA300A46747 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137B376124DFFEA300A46747 /* ViewController.swift */; };
 		137B376824DFFEA300A46747 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 137B376424DFFEA300A46747 /* Assets.xcassets */; };
 		137B377024E0013A00A46747 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 137B376F24E0013A00A46747 /* Info.plist */; };
+		137B377224E005C500A46747 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137B377124E005C500A46747 /* User.swift */; };
+		137B377824E0091600A46747 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137B377724E0091600A46747 /* Message.swift */; };
+		137B377A24E0096A00A46747 /* Conversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137B377924E0096A00A46747 /* Conversation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +42,9 @@
 		137B376124DFFEA300A46747 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		137B376424DFFEA300A46747 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		137B376F24E0013A00A46747 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		137B377124E005C500A46747 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		137B377724E0091600A46747 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		137B377924E0096A00A46747 /* Conversation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conversation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +118,9 @@
 		137B376224DFFEA300A46747 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				137B377124E005C500A46747 /* User.swift */,
+				137B377724E0091600A46747 /* Message.swift */,
+				137B377924E0096A00A46747 /* Conversation.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -234,7 +243,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				137B377A24E0096A00A46747 /* Conversation.swift in Sources */,
+				137B377224E005C500A46747 /* User.swift in Sources */,
 				137B373F24DFFCFC00A46747 /* AppDelegate.swift in Sources */,
+				137B377824E0091600A46747 /* Message.swift in Sources */,
 				137B376724DFFEA300A46747 /* ViewController.swift in Sources */,
 				137B374124DFFCFC00A46747 /* SceneDelegate.swift in Sources */,
 			);
