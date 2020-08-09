@@ -23,7 +23,7 @@ class DavDoktorConversationTests: XCTestCase {
     }
 
     func testAddMessage() throws {
-        let message: Message = Message(id: "12", content: "test content")
+        let message: Message = Message(id: "12", senderId: "4", content: "test content")
         conversation.addMessage(message: message)
         
         XCTAssert(conversation.messages.count > 0)

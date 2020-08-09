@@ -9,8 +9,13 @@
 import Foundation
 
 class NetworkServiceMock {
-    func fetchData(completion: @escaping (Result<Data, Error>) -> Void) {
+    func fetchUserData(completion: @escaping (Result<Data, Error>) -> Void) {
         let data = Data(userData.utf8)
+        completion(.success(data))
+    }
+    
+    func fetchConversationData(completion: @escaping (Result<Data, Error>) -> Void) {
+        let data = Data(conversationData.utf8)
         completion(.success(data))
     }
 }

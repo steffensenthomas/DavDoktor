@@ -10,10 +10,12 @@ import Foundation
 
 struct Message: Decodable {
     let id: String
+    let senderId: String
     let content: String
     
-    init(id: String, content: String) {
+    init(id: String, senderId: String, content: String) {
         self.id = id
+        self.senderId = senderId
         self.content = content
     }
 }

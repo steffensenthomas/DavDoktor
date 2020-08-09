@@ -37,7 +37,7 @@ class MainMenuTableViewController: UIViewController, UITableViewDataSource, UITa
     }
     
     func setupUser() {
-        networkService.fetchData { result in
+        networkService.fetchUserData { result in
             switch result {
                 case .success(let data):
                     do {
@@ -95,6 +95,16 @@ class MainMenuTableViewController: UIViewController, UITableViewDataSource, UITa
         
         self.setupName()
         self.setupMenu()
+    }
+    
+    // MARK: navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+        let destinationController = segue.destination as! ConversationTableViewController
+        destinationController.conversations = self.conversations
+        destinationController.currentUser = self.currentUser
     }
 }
 
