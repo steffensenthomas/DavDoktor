@@ -13,7 +13,9 @@ class ConversationTableViewController: UIViewController, UITableViewDelegate, UI
     var conversations: Array<Conversation> = Array<Conversation>()
     var currentUser: User? = nil
     let conversationCellIdentifier = "conversationCell"
+    let messagesSegueIdentifier = "messagesSegue"
     let networkService = NetworkServiceMock()
+    var selectedConversation: Conversation? = nil
 
     @IBOutlet weak var conversationTableView: UITableView!
     
@@ -57,5 +59,21 @@ class ConversationTableViewController: UIViewController, UITableViewDelegate, UI
         cell.textLabel?.text = conversation.title
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.selectedConversation = self.conversations[indexPath.row]
+        
+        self.performSegue(withIdentifier: messagesSegueIdentifier, sender: self)
+    }
+    
+    // MARK: navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+        let destinationController = segue.destination as! MessagesTableViewController
+        destinationController.conversation = self.selectedConversation
+        destinationController.currentUser = self.currentUser
     }
 }
