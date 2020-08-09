@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ConversationTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ConversationTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, NewConversationViewControllerDelegate {
     
     var conversations: Array<Conversation> = Array<Conversation>()
     var currentUser: User? = nil
@@ -72,8 +72,22 @@ class ConversationTableViewController: UIViewController, UITableViewDelegate, UI
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
-        let destinationController = segue.destination as! MessagesTableViewController
-        destinationController.conversation = self.selectedConversation
-        destinationController.currentUser = self.currentUser
+        if segue.identifier == self.messagesSegueIdentifier {
+            let destinationController = segue.destination as! MessagesTableViewController
+            destinationController.conversation = self.selectedConversation
+            destinationController.currentUser = self.currentUser
+        }
+        else {
+            let destinationController = segue.destination as! NewConversationViewController
+            destinationController.delegate = self
+            
+        }
+    }
+    
+    // MARK: NewConversationViewControllerDelegate
+    
+    func addConversation(conversation: Conversation) {
+        self.conversations.append(conversation)
+        self.conversationTableView.reloadData()
     }
 }

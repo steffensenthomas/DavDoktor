@@ -108,6 +108,56 @@
             </objects>
             <point key="canvasLocation" x="-185.50724637681162" y="236.38392857142856"/>
         </scene>
+        <!--Ny samtale-->
+        <scene sceneID="SyY-fu-dru">
+            <objects>
+                <viewController id="vNW-QO-gcx" customClass="NewConversationViewController" customModule="DavDoktor" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="57K-Nl-jHR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WWU-wn-aPv">
+                                <rect key="frame" x="51" y="184" width="312" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X9m-m6-jkg">
+                                <rect key="frame" x="186" y="134" width="42" height="27"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="piB-PO-Pk4">
+                                <rect key="frame" x="187" y="255" width="40" height="30"/>
+                                <state key="normal" title="Opret"/>
+                                <connections>
+                                    <action selector="createPressed:" destination="7Xl-aq-z5Q" eventType="touchUpInside" id="5mx-ZR-qPR"/>
+                                    <action selector="createPressed:" destination="vNW-QO-gcx" eventType="touchUpInside" id="mNt-vm-eUS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="X9m-m6-jkg" firstAttribute="top" secondItem="TgA-aW-oL7" secondAttribute="top" constant="46" id="74f-aG-MwT"/>
+                            <constraint firstItem="X9m-m6-jkg" firstAttribute="centerX" secondItem="WWU-wn-aPv" secondAttribute="centerX" id="H7f-84-LjR"/>
+                            <constraint firstItem="WWU-wn-aPv" firstAttribute="centerX" secondItem="piB-PO-Pk4" secondAttribute="centerX" id="KUz-QJ-5XH"/>
+                            <constraint firstItem="WWU-wn-aPv" firstAttribute="leading" secondItem="TgA-aW-oL7" secondAttribute="leading" constant="51" id="RFH-QH-fcT"/>
+                            <constraint firstItem="piB-PO-Pk4" firstAttribute="top" secondItem="WWU-wn-aPv" secondAttribute="bottom" constant="37" id="WaT-vY-Iip"/>
+                            <constraint firstItem="X9m-m6-jkg" firstAttribute="centerX" secondItem="57K-Nl-jHR" secondAttribute="centerX" id="X0Y-JW-H9y"/>
+                            <constraint firstItem="WWU-wn-aPv" firstAttribute="top" secondItem="X9m-m6-jkg" secondAttribute="bottom" constant="23" id="fH0-qo-yNT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="TgA-aW-oL7"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Ny samtale" id="d5Q-cy-jHY"/>
+                    <connections>
+                        <outlet property="newConversationTextField" destination="WWU-wn-aPv" id="2DK-P1-UOv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WtS-bu-9ub" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="7Xl-aq-z5Q" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1705.7971014492755" y="-498.21428571428567"/>
+        </scene>
         <!--Samtaler-->
         <scene sceneID="FJ2-FA-SPx">
             <objects>
@@ -144,7 +194,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="v0w-fu-Qhr"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Samtaler" id="bpc-RN-1nP"/>
+                    <navigationItem key="navigationItem" title="Samtaler" id="bpc-RN-1nP">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Pey-tq-Vgt">
+                            <connections>
+                                <segue destination="vNW-QO-gcx" kind="show" id="REV-Ku-B7G"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="conversationTableView" destination="ncV-H2-scD" id="x7H-hz-WzR"/>
                         <segue destination="u77-UA-gIJ" kind="show" identifier="messagesSegue" id="f19-rO-m2c"/>
