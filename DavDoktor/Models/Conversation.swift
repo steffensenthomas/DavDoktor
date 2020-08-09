@@ -11,8 +11,13 @@ import Foundation
 class Conversation: Decodable {
     let id: String
     let title: String
-    var messages: Array<Message>
-    var status: Int
+    var messages: Array<Message> = Array<Message>()
+    var status: Int = ConversationStatus.active.rawValue
+    
+    init(id:String, title:String) {
+        self.id = id
+        self.title = title
+    }
     
     func addMessage(message:Message) {
         messages.append(message)

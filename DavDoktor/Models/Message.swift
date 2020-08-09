@@ -11,4 +11,9 @@ import Foundation
 struct Message: Decodable {
     let id: String
     let content: String
+    
+    init(id: String, content: String) {
+        self.id = id
+        self.content = content
+    }
 }
