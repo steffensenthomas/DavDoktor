@@ -13,12 +13,30 @@ class MessagesTableViewController: UIViewController, UITableViewDataSource, UITa
     var conversation: Conversation? = nil
     var currentUser: User? = nil
     let messageCellIdentifier = "messageCell"
+    
     @IBOutlet weak var messageTableView: UITableView!
+    @IBOutlet weak var closeConversationButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        setup()
+    }
+    
+    // MARK: setup
+    
+    func setup() {
+        self.title = self.conversation?.title
+        
+        if self.conversation?.status == ConversationStatus.closed.rawValue {
+            self.navigationItem.rightBarButtonItem = nil
+            self.closeConversationButton.isHidden = true
+        }
+        
+        if self.currentUser?.type == "patient" {
+            self.closeConversationButton.isHidden = true
+        }
     }
     
     // MARK: Tableview datasource
@@ -69,4 +87,13 @@ class MessagesTableViewController: UIViewController, UITableViewDataSource, UITa
         let destinationController = segue.destination as! NewMessageViewController
         destinationController.delegate = self
     }
+    
+    // MARK: IBActions
+    
+    @IBAction func closeConversationPressed(_ sender: Any) {
+        self.conversation?.status = ConversationStatus.closed.rawValue
+        self.navigationItem.rightBarButtonItem = nil;
+        self.closeConversationButton.isHidden = true
+    }
+    
 }

@@ -264,7 +264,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UbM-eq-yHs">
-                                <rect key="frame" x="0.0" y="88" width="414" height="794"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="711"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="messageCell" rowHeight="83" id="MwE-qP-MIv" customClass="MessageTableViewCell" customModule="DavDoktor" customModuleProvider="target">
@@ -300,13 +300,23 @@
                                     <outlet property="delegate" destination="u77-UA-gIJ" id="ulg-mp-w5c"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="36p-U5-NCy">
+                                <rect key="frame" x="113" y="832" width="189" height="30"/>
+                                <state key="normal" title="Afslut samtale"/>
+                                <connections>
+                                    <action selector="closeConversationPressed:" destination="u77-UA-gIJ" eventType="touchUpInside" id="WSg-Mi-ERe"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="36p-U5-NCy" firstAttribute="leading" secondItem="PVd-WF-72S" secondAttribute="leading" constant="113" id="KTv-yX-GZF"/>
+                            <constraint firstItem="36p-U5-NCy" firstAttribute="centerX" secondItem="UbM-eq-yHs" secondAttribute="centerX" id="THu-Pb-f0L"/>
                             <constraint firstItem="UbM-eq-yHs" firstAttribute="centerX" secondItem="pfF-mo-VNl" secondAttribute="centerX" id="b6D-JU-tGd"/>
                             <constraint firstItem="UbM-eq-yHs" firstAttribute="leading" secondItem="PVd-WF-72S" secondAttribute="leading" id="fcb-Q6-oKN"/>
+                            <constraint firstItem="36p-U5-NCy" firstAttribute="bottom" secondItem="PVd-WF-72S" secondAttribute="bottom" id="oUM-Tq-EeI"/>
                             <constraint firstItem="UbM-eq-yHs" firstAttribute="top" secondItem="PVd-WF-72S" secondAttribute="top" id="vU2-IN-dGF"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="UbM-eq-yHs" secondAttribute="bottom" constant="-20" id="xam-8x-zgJ"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="UbM-eq-yHs" secondAttribute="bottom" constant="63" id="xam-8x-zgJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PVd-WF-72S"/>
                     </view>
@@ -318,6 +328,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="closeConversationButton" destination="36p-U5-NCy" id="F5W-Mx-8M2"/>
                         <outlet property="messageTableView" destination="UbM-eq-yHs" id="e9w-D3-fCd"/>
                     </connections>
                 </viewController>
