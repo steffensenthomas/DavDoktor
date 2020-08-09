@@ -11,7 +11,7 @@
 		137B374124DFFCFC00A46747 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137B374024DFFCFC00A46747 /* SceneDelegate.swift */; };
 		137B374624DFFCFC00A46747 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 137B374424DFFCFC00A46747 /* Main.storyboard */; };
 		137B374B24DFFD0100A46747 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 137B374924DFFD0100A46747 /* LaunchScreen.storyboard */; };
-		137B375624DFFD0200A46747 /* DavDoktorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137B375524DFFD0200A46747 /* DavDoktorTests.swift */; };
+		137B375624DFFD0200A46747 /* DavDoktorConversationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137B375524DFFD0200A46747 /* DavDoktorConversationTests.swift */; };
 		137B376724DFFEA300A46747 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137B376124DFFEA300A46747 /* ViewController.swift */; };
 		137B376824DFFEA300A46747 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 137B376424DFFEA300A46747 /* Assets.xcassets */; };
 		137B377024E0013A00A46747 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 137B376F24E0013A00A46747 /* Info.plist */; };
@@ -37,7 +37,7 @@
 		137B374524DFFCFC00A46747 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		137B374A24DFFD0100A46747 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		137B375124DFFD0200A46747 /* DavDoktorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DavDoktorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		137B375524DFFD0200A46747 /* DavDoktorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DavDoktorTests.swift; sourceTree = "<group>"; };
+		137B375524DFFD0200A46747 /* DavDoktorConversationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DavDoktorConversationTests.swift; sourceTree = "<group>"; };
 		137B375724DFFD0200A46747 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		137B376124DFFEA300A46747 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		137B376424DFFEA300A46747 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -101,7 +101,7 @@
 		137B375424DFFD0200A46747 /* DavDoktorTests */ = {
 			isa = PBXGroup;
 			children = (
-				137B375524DFFD0200A46747 /* DavDoktorTests.swift */,
+				137B375524DFFD0200A46747 /* DavDoktorConversationTests.swift */,
 				137B375724DFFD0200A46747 /* Info.plist */,
 			);
 			path = DavDoktorTests;
@@ -256,7 +256,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				137B375624DFFD0200A46747 /* DavDoktorTests.swift in Sources */,
+				137B375624DFFD0200A46747 /* DavDoktorConversationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
