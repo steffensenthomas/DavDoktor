@@ -8,11 +8,13 @@
 
 import UIKit
 
-class MessagesTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class MessagesTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, NewMessageViewControllerDelegate {
+    
     var conversation: Conversation? = nil
     var currentUser: User? = nil
     let messageCellIdentifier = "messageCell"
-
+    @IBOutlet weak var messageTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -51,5 +53,20 @@ class MessagesTableViewController: UIViewController, UITableViewDataSource, UITa
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
             return UITableView.automaticDimension;
 
+    }
+    
+    // MARK: NewMessageViewControllerDelegate
+    
+    func addMessage(content: String) {
+        let message = Message(id: "435", senderId: self.currentUser!.id, content: content)
+        self.conversation?.messages.append(message)
+        self.messageTableView.reloadData()
+    }
+    
+    // MARK: Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destinationController = segue.destination as! NewMessageViewController
+        destinationController.delegate = self
     }
 }

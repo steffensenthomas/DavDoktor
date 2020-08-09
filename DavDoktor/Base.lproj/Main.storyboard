@@ -158,6 +158,51 @@
             </objects>
             <point key="canvasLocation" x="1705.7971014492755" y="-498.21428571428567"/>
         </scene>
+        <!--Ny besked-->
+        <scene sceneID="nA3-VO-19r">
+            <objects>
+                <viewController id="xBo-RE-a2T" customClass="NewMessageViewController" customModule="DavDoktor" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zj8-le-cKh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Besked" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kYo-Rx-M3n">
+                                <rect key="frame" x="179" y="129" width="57" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ezr-3Z-oVC">
+                                <rect key="frame" x="56" y="158" width="303" height="148"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8o5-G1-jGy">
+                                <rect key="frame" x="189" y="321" width="36" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Send"/>
+                                <connections>
+                                    <action selector="createMessagePressed:" destination="xBo-RE-a2T" eventType="touchUpInside" id="HIo-nl-Or5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="am8-Jp-unl"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Ny besked" id="ePv-be-m9u"/>
+                    <connections>
+                        <outlet property="newMessageTextView" destination="Ezr-3Z-oVC" id="3eF-oF-TFC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b50-1h-RDg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2556.521739130435" y="-496.20535714285711"/>
+        </scene>
         <!--Samtaler-->
         <scene sceneID="FJ2-FA-SPx">
             <objects>
@@ -265,7 +310,16 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PVd-WF-72S"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Beskeder" id="1Lp-9k-v3u"/>
+                    <navigationItem key="navigationItem" title="Beskeder" id="1Lp-9k-v3u">
+                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="afC-YM-YfR">
+                            <connections>
+                                <segue destination="xBo-RE-a2T" kind="show" id="48H-pa-6kR"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="messageTableView" destination="UbM-eq-yHs" id="e9w-D3-fCd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Za4-FM-EK1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
