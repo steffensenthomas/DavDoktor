@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1314DB7124E0261A00AC938B /* NetworkServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1314DB7024E0261A00AC938B /* NetworkServiceMock.swift */; };
+		1314DB7324E0263300AC938B /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1314DB7224E0263300AC938B /* UserData.swift */; };
 		137B373F24DFFCFC00A46747 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137B373E24DFFCFC00A46747 /* AppDelegate.swift */; };
 		137B374124DFFCFC00A46747 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137B374024DFFCFC00A46747 /* SceneDelegate.swift */; };
 		137B374624DFFCFC00A46747 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 137B374424DFFCFC00A46747 /* Main.storyboard */; };
 		137B374B24DFFD0100A46747 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 137B374924DFFD0100A46747 /* LaunchScreen.storyboard */; };
 		137B375624DFFD0200A46747 /* DavDoktorConversationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137B375524DFFD0200A46747 /* DavDoktorConversationTests.swift */; };
-		137B376724DFFEA300A46747 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137B376124DFFEA300A46747 /* ViewController.swift */; };
+		137B376724DFFEA300A46747 /* MainMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137B376124DFFEA300A46747 /* MainMenuTableViewController.swift */; };
 		137B376824DFFEA300A46747 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 137B376424DFFEA300A46747 /* Assets.xcassets */; };
 		137B377024E0013A00A46747 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 137B376F24E0013A00A46747 /* Info.plist */; };
 		137B377224E005C500A46747 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137B377124E005C500A46747 /* User.swift */; };
@@ -31,6 +33,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1314DB7024E0261A00AC938B /* NetworkServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceMock.swift; sourceTree = "<group>"; };
+		1314DB7224E0263300AC938B /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		137B373B24DFFCFC00A46747 /* DavDoktor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DavDoktor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		137B373E24DFFCFC00A46747 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		137B374024DFFCFC00A46747 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,7 +43,7 @@
 		137B375124DFFD0200A46747 /* DavDoktorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DavDoktorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		137B375524DFFD0200A46747 /* DavDoktorConversationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DavDoktorConversationTests.swift; sourceTree = "<group>"; };
 		137B375724DFFD0200A46747 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		137B376124DFFEA300A46747 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		137B376124DFFEA300A46747 /* MainMenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuTableViewController.swift; sourceTree = "<group>"; };
 		137B376424DFFEA300A46747 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		137B376F24E0013A00A46747 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		137B377124E005C500A46747 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -65,6 +69,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1314DB6F24E025FE00AC938B /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				1314DB7024E0261A00AC938B /* NetworkServiceMock.swift */,
+				1314DB7224E0263300AC938B /* UserData.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		137B373224DFFCFB00A46747 = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +99,7 @@
 		137B373D24DFFCFC00A46747 /* DavDoktor */ = {
 			isa = PBXGroup;
 			children = (
+				1314DB6F24E025FE00AC938B /* Data */,
 				137B376024DFFEA300A46747 /* Controllers */,
 				137B376224DFFEA300A46747 /* Models */,
 				137B376324DFFEA300A46747 /* Resources */,
@@ -110,7 +124,7 @@
 		137B376024DFFEA300A46747 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				137B376124DFFEA300A46747 /* ViewController.swift */,
+				137B376124DFFEA300A46747 /* MainMenuTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -245,9 +259,11 @@
 			files = (
 				137B377A24E0096A00A46747 /* Conversation.swift in Sources */,
 				137B377224E005C500A46747 /* User.swift in Sources */,
+				1314DB7324E0263300AC938B /* UserData.swift in Sources */,
 				137B373F24DFFCFC00A46747 /* AppDelegate.swift in Sources */,
 				137B377824E0091600A46747 /* Message.swift in Sources */,
-				137B376724DFFEA300A46747 /* ViewController.swift in Sources */,
+				137B376724DFFEA300A46747 /* MainMenuTableViewController.swift in Sources */,
+				1314DB7124E0261A00AC938B /* NetworkServiceMock.swift in Sources */,
 				137B374124DFFCFC00A46747 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
